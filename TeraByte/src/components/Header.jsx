@@ -1,29 +1,28 @@
 /* import React from 'react' */
+import { Box, Button, HStack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
-    <nav>
-      <div className="left">
-        <img src="" alt="logo" />
-        <h1>Photoly</h1>
-      </div>
+   <HStack justifyContent={"space-evenly"} w={'full'} p={'5'} h={'5rem'} >
+    <Box>
 
-      <div className="center">
-        <button>
-          <Link to={"/"}> Home </Link>
-        </button>
-        <button>
-          <Link to={"/"}> About </Link>
-        </button>
-        <button>
-          <Link to={"login.js"}> Login </Link>
-        </button>
-      </div>
+    <Text textTransform={'uppercase'} fontSize={'2rem'} p={'2'} >PhototLy</Text>
+    </Box>
+    <Box>
 
-      <div className="right">
-        <Link to={"/"}><img src="./assets/user.png" width={50} height={50}></img></Link> 
-      </div>
-    </nav>
+    </Box>
+      <Button variant={'link'} fontSize={'1.25rem'} p={'4'}  color={'black'}>
+        <Link to={'/'} > Home </Link>
+      </Button>
+      <Button variant={'link'} fontSize={'1.25rem'} p={'4'} color={'black'}>
+        <Link to={'#about'} >About</Link>
+      </Button>
+      <Button variant={'link'} fontSize={'1.25rem'} p={'4'} color={'black'} >
+        <Link to={'/login'} >Login </Link>
+      </Button>
+
+   </HStack>
   );
 };
 

@@ -1,0 +1,24 @@
+@import './basic.scss';
+
+.home1{
+    margin-top: 2rem;
+    width: 100%;
+    height: 120vh;
+    background-color:#fff ;
+    display: flex;
+
+   
+
+    >div {
+        width: 80%;
+        height: 100vh;
+        background-color: $secondary;
+        border-radius: 0 200px 200px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+}
