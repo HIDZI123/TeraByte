@@ -1,15 +1,15 @@
 /* import React from 'react' */
 import {useState} from 'react';
-
+import {Link} from 'react-router-dom';
 const Upload = () => {
   const [imageUrl, setImageUrl] = useState('');
+
   
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     const imageUrl = URL.createObjectURL(file);
     setImageUrl(imageUrl);
   };
-
 
   return (
     <>
@@ -31,7 +31,10 @@ const Upload = () => {
       )}
       <div className='buttons'>
       <label htmlFor="input-file">Upload</label>
-      <button className='edit'>Edit</button>
+      <button className='edit'>
+      <Link to={{ pathname: '/edit', state: { imageUrl } }}>Edit</Link>
+  
+      </button>
       </div>
       </div>
 
