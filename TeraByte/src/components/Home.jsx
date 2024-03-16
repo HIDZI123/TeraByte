@@ -35,6 +35,7 @@ const Home = () => {
             transition={{ duration: 1 }}
           >
             Create{" "}
+            
           </MotionHeading>
 
           <Box justifyContent={"flex-end"} display={"flex"}>
