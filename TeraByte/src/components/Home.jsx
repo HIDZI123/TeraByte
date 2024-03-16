@@ -8,6 +8,7 @@ import {
   Image,
   Text,
   VStack,
+  Stack
 } from "@chakra-ui/react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { IoCloudUploadOutline } from "react-icons/io5";
@@ -18,7 +19,6 @@ const Home = () => {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
   const MotionHeading = motion(Heading);
-  const MotionHstack = motion(HStack);
   const MotionVstack = motion(VStack);
 
   return (
@@ -148,35 +148,37 @@ const Home = () => {
         </Button>
       </MotionVstack>
 
-      <MotionHstack
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 7}}
-      >
-        {/* //Help me add a bout section for my website here */}
+      <Container maxW={'container.xl'} minH={'100vh'} p={'16'}>
+        <Heading
+          textTransform={'uppercase'}
+          py={'2'}
+          w={'fit-content'}
+          borderBottom={'2px solid'}
+          m={'auto'}
+        >
+          {' '}
+          About
+        </Heading>
 
-        <Box minW={"full"} h={"max-content"} backgroundColor={"#d7e3fce7"}>
-          <Heading fontSize={"3rem"}>About</Heading>
-          <Box padding={5}>
-            <Text>
-              Welcome to our unique platform where creativity meets technology.
+        <Stack
+          h={'full'}
+          p={'4'}
+          alignItems={'center'}
+          direction={['column', 'row']}
+        >
+      
+          <Text letterSpacing={'widest'} lineHeight={'190%'} p={['4', '16']} textAlign={'center'}>
+          Welcome to our unique platform where creativity meets technology.
               This website allows you to upload any image and leverage the power
-              of Artificial Intelligence to design it.
-            </Text>
-            <Text mt={3}>
-              Our advanced AI analyzes your image and applies a variety of
-              design principles to enhance it. Whether you are a professional
-              designer looking for a quick edit or a beginner exploring the
-              world of design, our platform is designed to cater to all your
-              needs.
-            </Text>
-            <Text mt={3}>
-              Start by uploading an image and let our AI do the rest. Experience
-              the future of design with us.
-            </Text>
-          </Box>
-        </Box>
-      </MotionHstack>
+              of Artificial Intelligence to design it. Our advanced AI analyzes
+              your image and applies a variety of design principles to enhance
+              it. Whether you are a professional designer looking for a quick
+              edit or a beginner exploring the world of design, our platform is
+              designed to cater to all your needs. Start by uploading an image
+              and let our AI do the rest. Experience the future of design with
+          </Text>
+        </Stack>
+      </Container>
     </VStack>
   );
 };
