@@ -4,25 +4,58 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-   <HStack justifyContent={"space-evenly"} w={'full'} p={'5'} h={'5rem'} >
-    <Box>
+    <HStack justifyContent={"space-evenly"} w={"full"} p={"5"} h={"5rem"} backgroundColor={'#D6BCFA'}>
+      <Box>
+        <Text textTransform={"uppercase"} fontSize={"2rem"} p={"2"}>
+          PhototLy
+        </Text>
+      </Box>
+      <Box></Box>
 
-    <Text textTransform={'uppercase'} fontSize={'2rem'} p={'2'} >PhototLy</Text>
-    </Box>
-    <Box>
-
-    </Box>
-      <Button variant={'link'} fontSize={'1.25rem'} p={'4'}  color={'black'}>
-        <Link to={'/'} > Home </Link>
+      <Button
+        variant={"solid"}
+        fontSize={"1.25rem"}
+        p={"5"}
+        backgroundColor={'#D6BCFA'}
+        color={"black"}
+        _hover={{
+          backgroundColor: "#805AD5",
+          color: "White",
+          borderBottom: '4px solid #44337A'
+         
+        }}
+      >
+        <Link to={"/"}> Home </Link>
       </Button>
-      <Button variant={'link'} fontSize={'1.25rem'} p={'4'} color={'black'}>
-        <Link to={'#about'} >About</Link>
+      <Button  variant={"solid"}
+        fontSize={"1.25rem"}
+        p={"5"}
+        backgroundColor={'#D6BCFA'}
+        color={"black"}
+        _hover={{
+          backgroundColor: "#805AD5",
+          color: "White",
+          borderBottom: '4px solid #44337A'
+         
+        }}>
+        <Link to={"#about"}>About</Link>
       </Button>
-      <Button variant={'link'} fontSize={'1.25rem'} p={'4'} color={'black'} >
-        <Link to={'/login'} >Login </Link>
+      <Button  variant={"solid"}
+        fontSize={"1.25rem"}
+        p={"5"}
+        backgroundColor={'#D6BCFA'}
+        color={"black"}
+        borderRadius={'12px 0px 12px 12px'}
+        _hover={{
+          backgroundColor: "#805AD5",
+          color: "White",
+          borderBottom: '4px solid #44337A',
+          transform: 'scale(1.2)'
+         
+        }}>
+        <Link to={"/login"}>Login </Link>
       </Button>
-
-   </HStack>
+    </HStack>
   );
 };
 
