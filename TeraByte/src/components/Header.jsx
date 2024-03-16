@@ -3,16 +3,25 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <nav>
-      
       <div className="left">
         <img src="" alt="logo" />
         <h1>Photoly</h1>
       </div>
 
+      <div className="center">
+        <button>
+          <Link to={"/"}> Home </Link>
+        </button>
+        <button>
+          <Link to={"/"}> About </Link>
+        </button>
+        <button>
+          <Link to={"/login"}> Login </Link>
+        </button>
+      </div>
+
       <div className="right">
-        <Link to={"/"}> Home </Link>
-        <Link to={"/"}> About </Link>
-        <Link to={"/login"}> Login </Link>
+        <h1>Pofile</h1>
       </div>
     </nav>
   );
