@@ -16,12 +16,12 @@ const Header = () => {
           <Link to={"/"}> About </Link>
         </button>
         <button>
-          <Link to={"/login"}> Login </Link>
+          <Link to={"login.js"}> Login </Link>
         </button>
       </div>
 
       <div className="right">
-        <h1>Pofile</h1>
+        <Link to={"/"}><img src="./assets/user.png" width={50} height={50}></img></Link> 
       </div>
     </nav>
   );

@@ -1,0 +1,31 @@
+.gooey {
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #FFDAB9, #E6E6FA);
+    /* background: linear-gradient(to top right,red,blue); */
+
+
+    top: 32%;
+    left: 25%;
+    filter: blur(40px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes gooey {
+    from {
+        filter: blur(40px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
