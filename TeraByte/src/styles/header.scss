@@ -6,6 +6,7 @@ nav {
   justify-content: space-evenly;
   border-bottom: 1px solid #d4c9c9;
   height: 5rem;
+  color: white;
 
   > .left {
     display: flex;
@@ -38,7 +39,7 @@ nav {
         color: #000;
       }
       &:hover {
-        border-bottom: 2px solid #2a14f1;
+        border-bottom: 2px solid $accent;
       }
     }
   }
