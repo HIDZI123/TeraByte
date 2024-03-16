@@ -1,15 +1,6 @@
 @import './basic.scss';
-
-
-.change-brightness-component {
-  padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-  .edited-image-path {
-    font-size: 16px;
-    margin-top: 10px;
-    color: #333;
-  }
+.box{
+  height: 100vh;
+  width: 100%;
+  background-color: aqua;
 }
