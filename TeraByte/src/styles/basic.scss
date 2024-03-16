@@ -1,6 +1,21 @@
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
+
+$text: #060c1c;
+$background: #f3f7fc;
+$primary: #3d66d5;
+$secondary: #b694e8;
+$accent: #ab65de;
+$a : #d7e3fce7
+
+/* --linearPrimarySecondary: linear-gradient(#3d66d5, #b694e8);
+--linearPrimaryAccent: linear-gradient(#3d66d5, #ab65de);
+--linearSecondaryAccent: linear-gradient(#b694e8, #ab65de);
+--radialPrimarySecondary: radial-gradient(#3d66d5, #b694e8);
+--radialPrimaryAccent: radial-gradient(#3d66d5, #ab65de);
+--radialSecondaryAccent: radial-gradient(#b694e8, #ab65de); */
