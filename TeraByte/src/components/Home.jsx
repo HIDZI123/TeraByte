@@ -1,5 +1,5 @@
 /* import React from 'react' */
-import { Box, Container, HStack, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Container, HStack, Heading, Image } from "@chakra-ui/react";
 import "../styles/movingelement.css";
 const Home = () => {
   return (

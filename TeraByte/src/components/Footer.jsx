@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react' */
 import '../styles/footer.css'
 import fb from '../assets/facebook.png'
 import twitter from '../assets/twitter.png'
