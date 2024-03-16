@@ -11,7 +11,6 @@ import '../src/styles/LoginSignup.css'
 const App = () => {
   return (
     <div>
-    
     <LoginSignup/>
     </div>
   );
