@@ -6,17 +6,15 @@ import Footer from "./components/Footer";
 import './styles/header.scss';
 import './styles/home.scss';
 import Upload from "./components/Upload";
+import LoginSignup from './components/LoginSignup';
+import '../src/styles/LoginSignup.css'
 
 const App = () => {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/upload" element={<Upload/>} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div>
+    
+    <LoginSignup/>
+    </div>
   );
 };
 
