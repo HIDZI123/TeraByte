@@ -1,24 +1,51 @@
 /* import React from 'react' */
-import '../styles/movingelement.css'
+import { Box, Container, HStack, Heading, Image, Text } from "@chakra-ui/react";
+import "../styles/movingelement.css";
 const Home = () => {
   return (
-    <div className="home1">
-      <div>
+    <HStack
+      minW={"full"}
+      h={"max-content"}
       
+      backgroundColor={"#d7e3fce7"}
+    >
+      <Container minW={"40%"} h={"80vh"} pt={"50px"}>
+        <Heading textTransform={"uppercase"} fontSize={"6.5rem"}>
+          Create{" "}
+        </Heading>
 
-        
-        <h1>About</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores quos totam ipsum pariatur amet neque reprehenderit et quasi eligendi dignissimos, at illo deleniti placeat, quia rem rerum! Officia, enim quos?
-        Laudantium harum impedit ex consequuntur? Deleniti cum perspiciatis voluptatum inventore ut rerum quas deserunt exercitationem dicta saepe reiciendis asperiores nemo eos at totam, nisi quisquam molestiae odit! Labore, explicabo obcaecati?
-        Laudantium fugiat veritatis exercitationem, quas adipisci nam sunt, illo magni iure placeat similique ratione maxime earum saepe, magnam nesciunt aperiam delectus rem? Est, at veritatis excepturi dolorem magni architecto ex.
-        Dolores impedit suscipit tempora veritatis cupiditate eius ea voluptatibus quia consectetur nostrum unde quos rerum ipsam aliquam cumque blanditiis incidunt quisquam velit corrupti praesentium ex et voluptates, ab laborum. Aperiam.
-        Debitis ex amet repellat ipsam. Iste dignissimos error facere dolore beatae ut tempora neque aliquam placeat libero suscipit dolores obcaecati enim quam nisi, quia omnis asperiores assumenda nobis debitis. Consequuntur?</p>
-        
-        
-      </div>
+        <Box justifyContent={"flex-end"} display={"flex"}>
+          <Heading
+            textTransform={"uppercase"}
+            fontSize={"6.5rem"}
+            lineHeight={"80px"}
+            alignItems={"end"}
+          >
+            Your
+          </Heading>
+        </Box>
 
-    </div>
-  )
-}
+        <Heading textTransform={"uppercase"} fontSize={"6.5rem"}>
+          Image
+        </Heading>
+      </Container>
 
-export default Home
+
+      <Box
+        w={"50%"}
+        h={"80vh"}
+        pt={'5'}
+        backgroundColor={"transparent"}
+        position={'relative'}
+        filter={'drop-shadow( 20px 20px 10px #805AD5)'}
+      >
+        <Image src="https://plus.unsplash.com/premium_photo-1666265087444-780ca39dbe31?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGh1bWFuJTIwaW1hZ2VzfGVufDB8fDB8fHww" h={'30%'} w={'30%'} objectFit={'contain'} position={'absolute'} right={'50'} />
+        <Image src="https://plus.unsplash.com/premium_photo-1672759323793-7fff002b3f8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGh1bWFuJTIwaW1hZ2VzfGVufDB8fDB8fHww"  h={'30%'} w={'30%'} objectFit={'contain'} position={'absolute'} left={'20'} top={'90'}  />
+        <Image src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTl8fGh1bWFuJTIwaW1hZ2VzfGVufDB8fDB8fHww"  h={'30%'} w={'30%'} objectFit={'contain'} position={'absolute'} right={'70'} bottom={'30'}  />
+        <Image src="https://images.unsplash.com/photo-1621826269707-5b27afe47c79?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aHVtYW4lMjBpbWFnZXMlMjBiZWFjaHxlbnwwfHwwfHx8MA%3D%3D"  h={'80%'} w={'90%'} objectFit={'contain'} position={'absolute'} left={'45'} top={'30'} zIndex={'1'} mt={'7'}   />
+      </Box>
+    </HStack>
+  );
+};
+
+export default Home;
