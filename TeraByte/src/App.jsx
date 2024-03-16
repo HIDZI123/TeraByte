@@ -11,10 +11,16 @@ import '../src/styles/LoginSignup.css'
 
 const App = () => {
   return (
-    <div>
-    
-    <LoginSignup/>
-    </div>
+    <Router>
+      <Header/>
+      <Routes>
+        <Route path="/" element = {<Home/>} />
+        <Route path="#about" element = {<Home/>} />
+        <Route path="/login" element = {<LoginSignup/>} />
+        <Route path="/upload" element = {<Upload/>} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 };
 
