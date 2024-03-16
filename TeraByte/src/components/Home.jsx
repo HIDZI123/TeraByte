@@ -149,7 +149,7 @@ const Home = () => {
         </Button>
       </MotionVstack>
 
-      <Container maxW={'container.xl'} minH={'100vh'} p={'16'}>
+      <Container maxW={'container.xl'} minH={'100vh'} p={'16'} id={"about"}>
         <Heading
           textTransform={'uppercase'}
           py={'2'}
@@ -161,7 +161,7 @@ const Home = () => {
           About
         </Heading>
 
-        <Stack
+        <Stack 
           h={'full'}
           p={'4'}
           alignItems={'center'}

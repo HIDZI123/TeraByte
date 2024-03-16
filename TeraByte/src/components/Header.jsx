@@ -27,19 +27,20 @@ const Header = () => {
       >
         <Link to={"/"}> Home </Link>
       </Button>
-      <Button  variant={"solid"}
-        fontSize={"1.25rem"}
-        p={"5"}
-        backgroundColor={'#D6BCFA'}
-        color={"black"}
-        _hover={{
-          backgroundColor: "#805AD5",
-          color: "White",
-          borderBottom: '4px solid #44337A'
-         
-        }}>
-        <Link to={"#about"}>About</Link>
+
+      <Button as="a" href="#about" variant={"solid"}
+            fontSize={"1.25rem"}
+            p={"5"}
+            backgroundColor={'#D6BCFA'}
+            color={"black"}
+            _hover={{
+              backgroundColor: "#805AD5",
+              color: "White",
+              borderBottom: '4px solid #44337A'
+            }}>
+            About
       </Button>
+      
       <Button  variant={"solid"}
         fontSize={"1.25rem"}
         p={"5"}
