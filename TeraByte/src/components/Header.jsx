@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <HStack justifyContent={"space-evenly"} w={"full"} p={"5"} h={"5rem"} backgroundColor={'#D6BCFA'} top={'0'} zIndex={'10'} position={'absolute'} >
+    <HStack justifyContent={"space-evenly"} w={"full"} p={"5"} h={"5rem"} backgroundColor={'#D6BCFA'} >
       <Box>
         <Text textTransform={"uppercase"} fontSize={"2rem"} p={"2"}>
           PhototLy

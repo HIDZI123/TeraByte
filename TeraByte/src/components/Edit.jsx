@@ -1,19 +1,39 @@
-/* eslint-disable react/prop-types */
+import React, { useState } from 'react';
+import Jimp from 'jimp';
+import path from 'path';
 
-// import React from 'react';
+const Edit = () => {
+  const [editedImagePath, setEditedImagePath] = useState(null);
 
-const Edit = ({ location }) => {
-  // Extract the image URL from the state passed via Link
-  const imageUrl = location.state.imageUrl;
+  const handleFileChange = async (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      try {
+        const image = await Jimp.read(file);
+        const outputPath = path.join(__dirname, 'editedimage.jpg');
+        await image.contrast(-0.5).writeAsync(outputPath);
+        setEditedImagePath(outputPath);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  };
 
   return (
-    <div className="box">
-      <h1>Edit Image</h1>
-      {imageUrl && <img src={imageUrl} alt="Uploaded pic" />}
+    <div className="change-brightness-component">
+      <input
+        type="file"
+        onChange={handleFileChange}
+        accept="image/png, image/jpeg" // restricts file selection to only image files
+      />
+      {editedImagePath && (
+        <div className="edited-image-preview">
+          <p>Edited Image Path: {editedImagePath}</p>
+          <img src={editedImagePath} alt="Edited Image" />
+        </div>
+      )}
     </div>
   );
 };
 
 export default Edit;
-
-

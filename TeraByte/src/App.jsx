@@ -13,14 +13,15 @@ import './styles/upload.scss'
 const App = () => {
   return (
     <Router>
-      <Header/>
+      <Header />
       <Routes>
-        <Route path="/" element = {<Home/>} />
-        <Route path="#aboutt" element = {<Home/>} />
-        <Route path="/login" element = {<LoginSignup/>} />
-        <Route path="/upload" element = {<Upload/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="#aboutt" element={<Home />} />
+        <Route path="/login" element={<LoginSignup />} />
+        <Route path="/upload" element={<Upload />} />
+
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 };
