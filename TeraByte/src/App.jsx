@@ -5,16 +5,17 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import  './styles/header.scss'
 import Upload from "./components/Upload";
+import './styles/upload.scss'
 
 const App = () => {
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/upload" element={<Upload/>} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 };

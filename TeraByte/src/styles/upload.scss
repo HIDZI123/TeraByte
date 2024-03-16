@@ -1,0 +1,76 @@
+@import './basic.scss';
+.main{
+  min-height: 100vh;
+  background-color: #000000;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  >#box{
+    width: 175vh;
+    height: 80%;
+    margin: 10px;
+    padding: 8vh;
+    background-color:antiquewhite;
+    border-radius: 2vh;
+    border: 1vh black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    >h1{
+      margin-bottom: 10px;
+    }
+    >input{
+      display: none;
+    }
+
+    >.buttons{
+      display: flex;
+      justify-content: space-evenly;
+      width: 70%;
+      >h1{
+        align-self: start;
+        margin-left: 2rem;
+        margin-top: 3vh;
+        color:black;
+      }
+      >img{
+        margin: 2rem;
+        height:50vh ;
+        object-fit: contain;
+        width: fit-content;
+        background-color:rgb(77, 77, 77);
+        border: 2px solid black;
+      }
+      >label{
+        display: block;
+        height: 20px;
+        width:20vh;
+        text-transform: capitalize;
+        padding: 3vh;
+        background-color: #ff0000;
+        color: #fff;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      >.edit{
+        border: none;
+        height: 20px;
+        width:20vh;
+        text-transform: capitalize;
+        padding: 3vh;
+        background-color: #ff0000;
+        color: #fff;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
