@@ -13,15 +13,17 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background: #e3f2fd;
+  background: #D6BCFA;
 }
 
 .container {
+  margin-top: 40px;
   width: 850px;
   padding: 30px 35px 35px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px #805AD5;
+  margin-bottom:70px;
 }
 
 .container.disable > .editor-panel,
@@ -84,8 +86,8 @@ body {
 
 .filter button.active {
   color: #fff;
-  border-color: #5372f0;
-  background: #5372f0;
+  border-color: #805AD5;
+  background: #805AD5;
 }
 
 .filter .slider {
@@ -102,7 +104,7 @@ body {
 .filter .slider input {
   width: 100%;
   height: 5px;
-  accent-color: #5372f0;
+  accent-color: #805AD5;
 }
 
 .editor-panel > .rotate {
@@ -123,8 +125,8 @@ body {
 
 .rotate .options button:active {
   color: #fff;
-  background: #5372f0;
-  border-color: #5372f0;
+  background: #805AD5;
+  border-color: #805AD5;
 }
 
 .wrapper > .preview-img {
@@ -174,8 +176,8 @@ body {
 
 .controls .save-img {
   margin-left: 5px;
-  background: #5372f0;
-  border: 1px solid #5372f0;
+  background: #805AD5;
+  border: 1px solid #805AD5;
 }
 
 @media screen and (max-width: 760px) {

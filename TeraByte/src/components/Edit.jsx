@@ -101,7 +101,7 @@ const EditComponent = () => {
 
   return (
     <div className="container">
-      <h2>Easy Image Editor</h2>
+      <h2> EDIT HERE</h2>
       <div className="wrapper">
         <div className="editor-panel">
           <div className="filter">

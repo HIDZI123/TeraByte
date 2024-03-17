@@ -144,7 +144,7 @@ const Home = () => {
           {" "}
           <IoCloudUploadOutline fontSize={"2rem"} />
           <Text ml={3} fontSize={"1.5rem"}>
-            <Link to="/upload">Upload Image</Link>
+            <Link to="/edit">Upload Image</Link>
           </Text>
         </Button>
       </MotionVstack>
