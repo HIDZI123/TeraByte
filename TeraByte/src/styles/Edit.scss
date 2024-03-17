@@ -23,42 +23,42 @@ body {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 20px #805AD5;
-  margin-bottom:70px;
+  margin-bottom: 70px;
 }
 
-.container.disable > .editor-panel,
-.container.disable > .controls > .reset-filter,
-.container.disable > .controls > .save-img {
+.container.disable>.editor-panel,
+.container.disable>.controls>.reset-filter,
+.container.disable>.controls>.save-img {
   opacity: 0.5;
   pointer-events: none;
 }
 
-.container > h2 {
+.container>h2 {
   margin-top: -8px;
   font-size: 22px;
   font-weight: 500;
 }
 
-.container > .wrapper {
+.container>.wrapper {
   display: flex;
   margin: 20px 0;
   min-height: 335px;
 }
 
-.wrapper > .editor-panel {
+.wrapper>.editor-panel {
   padding: 15px 20px;
   width: 280px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-.editor-panel > .title {
+.editor-panel>.title {
   display: block;
   font-size: 16px;
   margin-bottom: 12px;
 }
 
-.editor-panel > .options,
+.editor-panel>.options,
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -76,7 +76,7 @@ body {
   border: 1px solid #aaa;
 }
 
-.editor-panel > .filter > .options > button {
+.editor-panel>.filter>.options>button {
   width: calc(50% - 4px);
 }
 
@@ -94,7 +94,7 @@ body {
   margin-top: 12px;
 }
 
-.filter .slider > .filter-info {
+.filter .slider>.filter-info {
   display: flex;
   color: #464646;
   font-size: 14px;
@@ -107,11 +107,11 @@ body {
   accent-color: #805AD5;
 }
 
-.editor-panel > .rotate {
+.editor-panel>.rotate {
   margin-top: 17px;
 }
 
-.rotate > .options > button {
+.rotate>.options>button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,7 +129,7 @@ body {
   border-color: #805AD5;
 }
 
-.wrapper > .preview-img {
+.wrapper>.preview-img {
   flex-grow: 1;
   display: flex;
   overflow: hidden;
@@ -185,15 +185,15 @@ body {
     padding: 25px;
   }
 
-  .container > .wrapper {
+  .container>.wrapper {
     flex-wrap: wrap-reverse;
   }
 
-  .wrapper > .editor-panel {
+  .wrapper>.editor-panel {
     width: 100%;
   }
 
-  .wrapper > .preview-img {
+  .wrapper>.preview-img {
     width: 100%;
     margin: 0 0 15px;
   }
@@ -211,5 +211,42 @@ body {
 
   .controls .row .save-img {
     margin-left: 0px;
+  }
+}
+
+.editor-panel .rotate {
+  margin-top: 20px;
+
+  .title {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    button {
+      outline: none;
+      height: 40px;
+      font-size: 14px;
+      color: #6c757d;
+      background: #fff;
+      border-radius: 3px;
+      margin-bottom: 8px;
+      border: 1px solid #aaa;
+      width: calc(50% - 4px);
+
+      &:hover {
+        background: #f5f5f5;
+      }
+    }
+
+    button:nth-child(3),
+    button:nth-child(4) {
+      width: 100%;
+    }
   }
 }

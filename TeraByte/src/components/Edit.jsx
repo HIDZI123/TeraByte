@@ -140,6 +140,19 @@ const EditComponent = () => {
 
           </div>
           {/* Rotate and Flip controls */}
+          <div className="rotate">
+            <label className="title">Rotate & Flip</label>
+            <div className="options">
+              <button onClick={() => setRotate(rotate - 90)}>Rotate Left</button>
+              <button onClick={() => setRotate(rotate + 90)}>Rotate Right</button>
+              <button onClick={() => setFlipHorizontal(flipHorizontal === 1 ? -1 : 1)}>Flip Horizontal</button>
+              <button onClick={() => setFlipVertical(flipVertical === 1 ? -1 : 1)}>Flip Vertical</button>
+            </div>
+          </div>
+
+
+
+
         </div>
         <div className="preview-img">
           <img src={file ? file : "image-placeholder.svg"} alt="preview-img" style={applyFilter()} />
