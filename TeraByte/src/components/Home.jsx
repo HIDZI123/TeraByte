@@ -1,4 +1,5 @@
 /* import React from 'react' */
+
 import {
   Box,
   Button,
@@ -20,22 +21,18 @@ const Home = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
   const MotionHeading = motion(Heading);
   const MotionVstack = motion(VStack);
-  /*   backgroundColor={"#d7e3fce7"}
-#d7e3fce7 75%, purple.400 25%
- */
+
   return (
-    <VStack backgroundColor={"#d7e3fce7"} 
-    >
+    <VStack backgroundColor={"#d7e3fce7"}>
       <HStack minW={"full"} h={"100vh"}>
         <Container minW={"40%"} h={"80vh"} pt={"50px"}>
-          {/* Help me add framer motion for the Three headings in the container */}
-
           <MotionHeading
             textTransform={"uppercase"}
             fontSize={"6.5rem"}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
+            fontFamily={"Roboto"}
           >
             Create{" "}
           </MotionHeading>
@@ -49,6 +46,7 @@ const Home = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 1 }}
+              fontFamily={"Roboto"}
             >
               Your
             </MotionHeading>
@@ -60,6 +58,7 @@ const Home = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 2, duration: 1 }}
+            fontFamily={"Roboto"}
           >
             Image
           </MotionHeading>

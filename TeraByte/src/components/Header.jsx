@@ -1,18 +1,20 @@
 /* import React from 'react' */
-import { Box, Button, HStack, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Image, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import img from '../assets/logo1.png';
 
 const Header = () => {
   return (
-    <HStack justifyContent={"space-evenly"} w={"100%"} p={"5"} h={"5rem"} backgroundColor={'#D6BCFA'}  >
-      <Box>
+    <HStack justifyContent={"space-between"} w={"100%"} p={"5"} h={"5rem"} backgroundColor={'#D6BCFA'}  >
+      <Box display={'flex'} justifyContent={'center'} alignItems={'center'} p={'10'} mr={'2rem'}>
+        <Image src={img} h={'50'} w={'50'} objectFit={'contain'} mixBlendMode={'multiply'} border={'none'}  />
         <Text textTransform={"uppercase"} fontSize={"2rem"} p={"2"}>
-          PhototLy
+          PhotoLy
         </Text>
       </Box>
-      <Box></Box>
-
+      <Box display={'flex'} justifyContent={'space-evenly'}  > 
       <Button
+      m={'0 1.5rem'}
         variant={"solid"}
         fontSize={"1.25rem"}
         p={"5"}
@@ -29,6 +31,7 @@ const Header = () => {
       </Button>
 
       <Button as="a" href="#about" variant={"solid"}
+      m={'0 1.5rem'}
             fontSize={"1.25rem"}
             p={"5"}
             backgroundColor={'#D6BCFA'}
@@ -42,6 +45,7 @@ const Header = () => {
       </Button>
       
       <Button  variant={"solid"}
+      m={'0 1.5rem'}
         fontSize={"1.25rem"}
         p={"5"}
         backgroundColor={'#D6BCFA'}
@@ -56,6 +60,7 @@ const Header = () => {
         }}>
         <Link to={"/login"}>Login </Link>
       </Button>
+      </Box>
     </HStack>
   );
 };
