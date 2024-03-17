@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import "../styles/Edit.scss"; // Import SCSS file for styling
 
 const EditComponent = () => {
