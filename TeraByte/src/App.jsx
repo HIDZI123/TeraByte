@@ -7,8 +7,9 @@ import './styles/header.scss';
 import './styles/home.scss';
 import Upload from "./components/Upload";
 import LoginSignup from './components/LoginSignup';
-import '../src/styles/LoginSignup.css'
-import './styles/upload.scss'
+import '../src/styles/LoginSignup.css';
+import './styles/upload.scss';
+
 
 const App = () => {
   return (
