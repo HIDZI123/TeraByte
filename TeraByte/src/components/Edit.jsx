@@ -77,6 +77,25 @@ const EditComponent = () => {
   };
 
   const saveImage = () => {
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    const previewImg = document.querySelector(".preview-img img");
+    canvas.width = previewImg.naturalWidth;
+    canvas.height = previewImg.naturalHeight;
+
+    ctx.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`;
+    ctx.translate(canvas.width / 2, canvas.height / 2);
+    if (rotate !== 0) {
+      ctx.rotate(rotate * Math.PI / 180);
+    }
+    ctx.scale(flipHorizontal, flipVertical);
+    ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+
+    const link = document.createElement("a");
+    link.download = "image.jpg";
+    link.href = canvas.toDataURL();
+    link.click();
+
     // Your logic to save the image
   };
 
@@ -93,13 +112,32 @@ const EditComponent = () => {
               <button className={selectedFilter === 'inversion' ? 'active' : ''} onClick={() => handleFilterClick('inversion')}>Inversion</button>
               <button className={selectedFilter === 'grayscale' ? 'active' : ''} onClick={() => handleFilterClick('grayscale')}>Grayscale</button>
             </div>
+
             <div className="slider">
               <div className="filter-info">
-                <p className="name">Brightness</p>
-                <p className="value">{brightness}%</p>
+                <p className="name">{selectedFilter}</p>
+                <p className="value">
+                  {selectedFilter === 'brightness' ? brightness :
+                    selectedFilter === 'saturation' ? saturation :
+                      selectedFilter === 'inversion' ? inversion :
+                        selectedFilter === 'grayscale' ? grayscale : ''}
+                  {selectedFilter === 'brightness' || selectedFilter === 'saturation' ? '%' : ''}
+                </p>
               </div>
-              <input type="range" value={brightness} min="0" max="200" onChange={(e) => updateFilter(e.target.value)} />
+              <input
+                type="range"
+                value={
+                  selectedFilter === 'brightness' ? brightness :
+                    selectedFilter === 'saturation' ? saturation :
+                      selectedFilter === 'inversion' ? inversion :
+                        selectedFilter === 'grayscale' ? grayscale : ''
+                }
+                min="0"
+                max={selectedFilter === 'brightness' || selectedFilter === 'saturation' ? "200" : "100"}
+                onChange={(e) => updateFilter(e.target.value)}
+              />
             </div>
+
           </div>
           {/* Rotate and Flip controls */}
         </div>
