@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import "../styles/Edit.scss"; // Import SCSS file for styling
+import { MdOutlineRotate90DegreesCcw } from "react-icons/md";
+import { MdOutlineRotate90DegreesCw } from "react-icons/md";
+import { LuFlipHorizontal2 } from "react-icons/lu";
+import { LuFlipVertical2 } from "react-icons/lu";
 
 const EditComponent = () => {
   const [brightness, setBrightness] = useState(100);
@@ -143,10 +147,10 @@ const EditComponent = () => {
           <div className="rotate">
             <label className="title">Rotate & Flip</label>
             <div className="options">
-              <button onClick={() => setRotate(rotate - 90)}>Rotate Left</button>
-              <button onClick={() => setRotate(rotate + 90)}>Rotate Right</button>
-              <button onClick={() => setFlipHorizontal(flipHorizontal === 1 ? -1 : 1)}>Flip Horizontal</button>
-              <button onClick={() => setFlipVertical(flipVertical === 1 ? -1 : 1)}>Flip Vertical</button>
+              <button onClick={() => setRotate(rotate - 90)}> <MdOutlineRotate90DegreesCcw fontSize={'1.5rem'} /> </button>
+              <button onClick={() => setRotate(rotate + 90)}> <MdOutlineRotate90DegreesCw fontSize={'1.5rem'}  /> </button>
+              <button onClick={() => setFlipHorizontal(flipHorizontal === 1 ? -1 : 1)}> <LuFlipHorizontal2 fontSize={'1.5rem'}  /> </button>
+              <button onClick={() => setFlipVertical(flipVertical === 1 ? -1 : 1)}> <LuFlipVertical2 fontSize={'1.5rem'} /> </button>
             </div>
           </div>
 

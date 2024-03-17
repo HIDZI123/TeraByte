@@ -8,7 +8,7 @@ import {
   Image,
   Text,
   VStack,
-  Stack
+  Stack,
 } from "@chakra-ui/react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { IoCloudUploadOutline } from "react-icons/io5";
@@ -20,10 +20,13 @@ const Home = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
   const MotionHeading = motion(Heading);
   const MotionVstack = motion(VStack);
-
+  /*   backgroundColor={"#d7e3fce7"}
+#d7e3fce7 75%, purple.400 25%
+ */
   return (
-    <VStack backgroundColor={"#d7e3fce7"}>
-      <HStack minW={"full"} h={"100vh"} backgroundColor={"#d7e3fce7"}>
+    <VStack backgroundColor={"#d7e3fce7"} 
+    >
+      <HStack minW={"full"} h={"100vh"}>
         <Container minW={"40%"} h={"80vh"} pt={"50px"}>
           {/* Help me add framer motion for the Three headings in the container */}
 
@@ -35,7 +38,6 @@ const Home = () => {
             transition={{ duration: 1 }}
           >
             Create{" "}
-            
           </MotionHeading>
 
           <Box justifyContent={"flex-end"} display={"flex"}>
@@ -114,6 +116,7 @@ const Home = () => {
             mt={"7"}
             transition={"transform 0.5s ease-in-out"}
             _hover={{ transform: "scale(1.1)" }}
+            overflow={"hidden"}
           />
         </Box>
       </HStack>
@@ -149,34 +152,38 @@ const Home = () => {
         </Button>
       </MotionVstack>
 
-      <Container maxW={'container.xl'} minH={'100vh'} p={'16'} id={"about"}>
+      <Container maxW={"container.xl"} minH={"100vh"} p={"16"} id={"about"}>
         <Heading
-          textTransform={'uppercase'}
-          py={'2'}
-          w={'fit-content'}
-          borderBottom={'2px solid'}
-          m={'auto'}
+          textTransform={"uppercase"}
+          py={"2"}
+          w={"fit-content"}
+          borderBottom={"2px solid"}
+          m={"auto"}
         >
-          {' '}
+          {" "}
           About
         </Heading>
 
-        <Stack 
-          h={'full'}
-          p={'4'}
-          alignItems={'center'}
-          direction={['column', 'row']}
+        <Stack
+          h={"full"}
+          p={"4"}
+          alignItems={"center"}
+          direction={["column", "row"]}
         >
-      
-          <Text letterSpacing={'widest'} lineHeight={'190%'} p={['4', '16']} textAlign={'center'}>
-          Welcome to our unique platform where creativity meets technology.
-              This website allows you to upload any image and leverage the power
-              of Artificial Intelligence to design it. Our advanced AI analyzes
-              your image and applies a variety of design principles to enhance
-              it. Whether you are a professional designer looking for a quick
-              edit or a beginner exploring the world of design, our platform is
-              designed to cater to all your needs. Start by uploading an image
-              and let our AI do the rest. Experience the future of design with
+          <Text
+            letterSpacing={"widest"}
+            lineHeight={"190%"}
+            p={["4", "16"]}
+            textAlign={"center"}
+          >
+            Welcome to our unique platform where creativity meets technology.
+            This website allows you to upload any image and leverage the power
+            of Artificial Intelligence to design it. Our advanced AI analyzes
+            your image and applies a variety of design principles to enhance it.
+            Whether you are a professional designer looking for a quick edit or
+            a beginner exploring the world of design, our platform is designed
+            to cater to all your needs. Start by uploading an image and let our
+            AI do the rest. Experience the future of design with
           </Text>
         </Stack>
       </Container>
